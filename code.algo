@@ -1,0 +1,35 @@
+ALGORITHM code
+VAR
+   p:char;
+   i,v,m:integer;
+BEGIN
+
+    i:=0;
+    v:=0;
+    m:=0;
+
+
+REPEAT
+
+    Write("Donner un caractere");
+    Read(p);
+
+    i:=i+1;
+
+    IF (p='a' OR p='e' OR p='i' OR p='o' OR p='u' OR p='y' OR p='A' OR p='E' OR p='I' OR p='O' OR p='U' OR p='Y') THEN
+        v:=v+1;
+    END_IF 
+
+
+
+    IF (p=' ') THEN
+        m:=m+1;
+    END_IF
+
+
+UNTIL (p='.')
+
+    write("nombre de voyelles",v);
+    write("nombre de lettres",i);
+    write("nombre de mots",m+1);
+END
