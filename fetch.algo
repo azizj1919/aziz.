@@ -1,0 +1,38 @@
+ALGORITHM fetch
+VAR
+    t : ARRAY_OF integer length[] := [3, 1, 7, 9];
+     m : ARRAY_OF integer length[] := [2, 4, 1, 9, 3];
+     r : ARRAY_OF integer[length];
+     Distinct,Commun,i,j,t1,m1=integer;
+BEGIN                         
+    Commun:=0;
+    Distinct:=0;
+     t1:=0;
+    m1:=0;
+    FOR i FROM 1 TO T.length STEP 1  DO
+    t1:= t1 + t[i] + t[i+1];
+        FOR j FROM 1 TO m.length STEP 1  DO
+           
+                
+            
+            IF (t[i] = m[j]) THEN
+                Commun := commun + t[i] * 2;
+            END_IF
+
+
+                
+                
+            
+           
+        END_FOR
+    END_FOR
+    FOR j FROM 1 TO m.length STEP 1  DO
+        m1:= m1 + m[j] + m[j+1];
+                
+    END_FOR
+    
+    Distinct := Distinct + (t1+m1) - Commun
+
+    write("Commun=",Commun);
+    write("Distinct=",Distinct);
+END

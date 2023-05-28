@@ -1,0 +1,21 @@
+ALGORITHM htable
+VAR
+HASH_TABLE<integer,integer>
+    t : ARRAY_OF integer length[] := [3, 1, 7, 9];
+     m : ARRAY_OF integer length[] := [2, 4, 1, 9, 3];
+     c:integer;
+BEGIN
+    c := 0;
+  FOR i FROM 1 TO T.length STEP 1  DO
+        h.insert(t[i],1)
+   END_FOR  
+
+
+
+   FOR j FROM 1 TO m.length STEP 1  DO
+   IF (h.lookup(t[i]) = true ) THEN
+    c:= c+1;
+   END_IF
+        h.insert(m[j],c)
+   END_FOR       
+END
